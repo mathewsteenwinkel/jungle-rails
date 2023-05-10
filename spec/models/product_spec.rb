@@ -29,7 +29,6 @@ RSpec.describe Product, type: :model do
         @product = Product.new(name: 'fern', price: 5000, quantity: nil, category: @category)
         @product.save
         expect(@product.errors.full_messages).to include("quantity can't be blank")
-
       end
 
       it.'validates category' do 
@@ -39,4 +38,7 @@ RSpec.describe Product, type: :model do
 
       end
     end
+
+
+
   end
